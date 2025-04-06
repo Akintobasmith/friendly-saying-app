@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,27 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+        // Custom colors for hair business
+        nude: {
+          light: '#F8F4E3',
+          DEFAULT: '#E6DACB',
+          dark: '#D8CABC'
+        },
+        gold: {
+          light: '#F2E8C6',
+          DEFAULT: '#D4AF37',
+          dark: '#BF9E30'
+        },
+        brown: {
+          light: '#C4A286',
+          DEFAULT: '#A67F5D',
+          dark: '#8C6B4F'
+        }
+			},
+			fontFamily: {
+				playfair: ['"Playfair Display"', 'serif'],
+				montserrat: ['Montserrat', 'sans-serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +105,26 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+        'bounce-hair': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-15px)' }
+        },
+        'float': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' }
+        },
+        'fade-in': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' }
+        }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+        'bounce-hair': 'bounce-hair 3s ease-in-out infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'fade-in': 'fade-in 1.2s ease-out'
 			}
 		}
 	},
