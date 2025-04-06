@@ -29,7 +29,7 @@ const HeroSection: React.FC = () => {
 
         {/* Right Image */}
         <div 
-          className="w-full md:w-1/2 mt-12 md:mt-0 scroll-animate"
+          className="w-full md:w-1/2 mt-12 md:mt-0 scroll-animate hair-hover-bounce"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
@@ -38,7 +38,7 @@ const HeroSection: React.FC = () => {
             <img 
               src="https://images.unsplash.com/photo-1595499231823-5a1996f65b5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
               alt="Luxurious Hair Extension" 
-              className={`relative z-10 rounded-2xl shadow-xl ${isHovered ? 'animate-bounce-hair' : ''} object-cover h-[500px] w-full`}
+              className={`relative z-10 rounded-2xl shadow-xl hair-image object-cover h-[500px] w-full`}
             />
             <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-3/4 h-6 bg-black opacity-10 blur-md rounded-full"></div>
           </div>
