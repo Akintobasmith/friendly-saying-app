@@ -13,14 +13,15 @@ const FAQ: React.FC = () => {
   return (
     <section className="py-16 bg-nude-light">
       <div className="container mx-auto px-4">
-        <h2 className="section-title text-center">Frequently Asked Questions</h2>
+        <h2 className="section-title text-center scroll-animate">Frequently Asked Questions</h2>
         <div className="max-w-3xl mx-auto">
           {faqs.map((faq, index) => (
             <div 
               key={index} 
-              className={`mb-4 border border-border rounded-lg overflow-hidden transition-all duration-300 ${
+              className={`mb-4 border border-border rounded-lg overflow-hidden transition-all duration-300 scroll-animate ${
                 activeIndex === index ? 'bg-white shadow-md' : 'bg-white'
               }`}
+              style={{ transitionDelay: `${index * 100}ms` }}
             >
               <button
                 className="w-full text-left px-6 py-4 flex justify-between items-center focus:outline-none"
