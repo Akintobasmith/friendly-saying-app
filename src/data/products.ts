@@ -17,7 +17,7 @@ export const products: Product[] = [
   {
     id: '1',
     name: 'Natural Silky Straight Hair',
-    description: 'Premium quality natural straight hair extension for a sleek, natural look.',
+    description: 'Premium quality natural straight hair extensions for women, perfect for a sleek, elegant look.',
     price: 199.99,
     imageUrl: 'https://images.unsplash.com/photo-1605980625600-88c0bd83a96b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
     category: 'natural',
@@ -30,7 +30,7 @@ export const products: Product[] = [
   {
     id: '2',
     name: 'Brazilian Deep Wave',
-    description: 'Luxurious Brazilian deep wave hair extension with natural bounce and texture.',
+    description: 'Luxurious Brazilian deep wave hair extensions for women with natural bounce and feminine texture.',
     price: 249.99,
     imageUrl: 'https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
     category: 'natural',
@@ -43,7 +43,7 @@ export const products: Product[] = [
   {
     id: '3',
     name: 'Synthetic Blonde Wavy Hair',
-    description: 'High-quality synthetic wavy hair extension that looks and feels like natural hair.',
+    description: 'High-quality synthetic wavy hair extensions designed specifically for women, with a natural look and feel.',
     price: 89.99,
     imageUrl: 'https://images.unsplash.com/photo-1562589600-caa8873808c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
     category: 'synthetic',
@@ -56,7 +56,7 @@ export const products: Product[] = [
   {
     id: '4',
     name: 'Natural Curly Afro Hair',
-    description: 'Beautiful natural curly afro hair for a voluminous and natural look.',
+    description: 'Beautiful natural curly afro hair extensions for women, adding volume and elegance to your look.',
     price: 179.99,
     imageUrl: 'https://images.unsplash.com/photo-1540247110674-31e928ee852a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
     category: 'natural',
@@ -69,7 +69,7 @@ export const products: Product[] = [
   {
     id: '5',
     name: 'Blended Ombre Straight Hair',
-    description: 'Beautiful blended hair with a gorgeous ombre effect from dark to caramel.',
+    description: 'Beautiful blended female hair extensions with a gorgeous ombre effect from dark to caramel, perfect for a sophisticated look.',
     price: 159.99,
     imageUrl: 'https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
     category: 'blended',
@@ -82,7 +82,7 @@ export const products: Product[] = [
   {
     id: '6',
     name: 'Luxury Hair Care Kit',
-    description: 'Complete hair care kit designed specifically for hair extensions.',
+    description: 'Complete hair care kit designed specifically for women\'s hair extensions, maintaining beauty and longevity.',
     price: 49.99,
     imageUrl: 'https://images.unsplash.com/photo-1567721913486-6585f069b332?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
     category: 'accessories',
@@ -93,7 +93,7 @@ export const products: Product[] = [
   {
     id: '7',
     name: 'Natural Loose Wave Hair',
-    description: 'Gorgeous loose wave natural hair for a relaxed, elegant style.',
+    description: 'Gorgeous loose wave natural hair extensions for women, creating a relaxed, elegant and feminine style.',
     price: 219.99,
     imageUrl: 'https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
     category: 'natural',
@@ -105,8 +105,8 @@ export const products: Product[] = [
   },
   {
     id: '8',
-    name: 'Synthetic Bob Cut',
-    description: 'Stylish synthetic bob cut wig for a modern, sophisticated look.',
+    name: 'Synthetic Bob Cut Wig',
+    description: 'Stylish synthetic bob cut wig for women, providing a modern, sophisticated and glamorous look.',
     price: 69.99,
     imageUrl: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
     category: 'synthetic',
@@ -129,5 +129,5 @@ export const categories = [
   { id: 'natural', name: 'Natural Hair' },
   { id: 'synthetic', name: 'Synthetic Hair' },
   { id: 'blended', name: 'Blended Hair' },
-  { id: 'accessories', name: 'Accessories' }
+  { id: 'accessories', name: 'Hair Accessories' }
 ];
