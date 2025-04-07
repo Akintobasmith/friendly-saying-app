@@ -1,3 +1,4 @@
+
 export interface Product {
   id: string;
   name: string;
@@ -31,7 +32,7 @@ export const products: Product[] = [
     name: 'Brazilian Deep Wave',
     description: 'Luxurious Brazilian deep wave hair extensions for women with natural bounce and feminine texture.',
     price: 249.99,
-    imageUrl: 'https://images.unsplash.com/photo-1513201099705-a9746e1e201f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
     category: 'natural',
     collection: 'wavy',
     bestSeller: true,
