@@ -1,4 +1,3 @@
-
 export interface Product {
   id: string;
   name: string;
@@ -19,7 +18,7 @@ export const products: Product[] = [
     name: 'Natural Silky Straight Hair',
     description: 'Premium quality natural straight hair extensions for women, perfect for a sleek, elegant look.',
     price: 199.99,
-    imageUrl: 'https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
     category: 'natural',
     collection: 'straight',
     bestSeller: true,
