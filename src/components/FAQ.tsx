@@ -1,51 +1,36 @@
 
 import React, { useState } from 'react';
 import { faqs } from '@/data/faqData';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { 
+  Accordion, 
+  AccordionContent, 
+  AccordionItem, 
+  AccordionTrigger 
+} from '@/components/ui/accordion';
 
 const FAQ: React.FC = () => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
-  const toggleFAQ = (index: number) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
   return (
     <section className="py-16 bg-nude-light">
       <div className="container mx-auto px-4">
-        <h2 className="section-title text-center scroll-animate">Frequently Asked Questions</h2>
+        <h2 className="section-title text-center scroll-animate mb-12">Frequently Asked Questions</h2>
         <div className="max-w-3xl mx-auto">
-          {faqs.map((faq, index) => (
-            <div 
-              key={index} 
-              className={`mb-4 border border-border rounded-lg overflow-hidden transition-all duration-300 scroll-animate ${
-                activeIndex === index ? 'bg-white shadow-md' : 'bg-white'
-              }`}
-              style={{ transitionDelay: `${index * 100}ms` }}
-            >
-              <button
-                className="w-full text-left px-6 py-4 flex justify-between items-center focus:outline-none"
-                onClick={() => toggleFAQ(index)}
+          <Accordion type="single" collapsible className="space-y-4">
+            {faqs.map((faq, index) => (
+              <AccordionItem 
+                key={index} 
+                value={`item-${index}`}
+                className="border border-border rounded-lg overflow-hidden bg-white shadow-sm scroll-animate"
+                style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <h3 className="font-playfair font-medium text-lg">{faq.question}</h3>
-                {activeIndex === index ? (
-                  <ChevronUp className="text-gold flex-shrink-0" />
-                ) : (
-                  <ChevronDown className="text-muted-foreground flex-shrink-0" />
-                )}
-              </button>
-              
-              <div 
-                className={`px-6 transition-all duration-300 overflow-hidden ${
-                  activeIndex === index 
-                    ? 'max-h-96 pb-6 opacity-100' 
-                    : 'max-h-0 opacity-0'
-                }`}
-              >
-                <p className="text-muted-foreground">{faq.answer}</p>
-              </div>
-            </div>
-          ))}
+                <AccordionTrigger className="px-6 py-4 hover:no-underline font-playfair font-medium text-lg">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-6 text-muted-foreground">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </div>
     </section>
