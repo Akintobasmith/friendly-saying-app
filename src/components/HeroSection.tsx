@@ -36,8 +36,8 @@ const HeroSection: React.FC = () => {
           <div className={`relative mx-auto max-w-md transition-all duration-500 ${isHovered ? 'scale-105' : 'scale-100'}`}>
             <div className="absolute inset-0 bg-gold opacity-10 rounded-full blur-3xl"></div>
             <img 
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-              alt="Woman with Luxurious Hair Extensions" 
+              src="https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+              alt="Elegant Hair Wigs Collection" 
               className="relative z-10 rounded-2xl shadow-xl animate-bounce-hair object-cover h-[500px] w-full"
             />
             <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-3/4 h-6 bg-black opacity-10 blur-md rounded-full"></div>
