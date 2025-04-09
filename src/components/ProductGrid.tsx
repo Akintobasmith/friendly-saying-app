@@ -25,6 +25,14 @@ const ProductGrid: React.FC = () => {
       <div className="container mx-auto px-4">
         <h2 className="section-title">Our Collection</h2>
         
+        {/* Featured Message */}
+        <div className="text-center mb-8">
+          <p className="text-lg text-brown-dark max-w-3xl mx-auto">
+            Explore our premium collection of luxury hair extensions, handcrafted for quality and natural beauty.
+            Hover over products to see them in motion.
+          </p>
+        </div>
+        
         {/* Search and Filter Bar */}
         <div className="mb-8 space-y-6">
           <div className="relative max-w-md mx-auto">

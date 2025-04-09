@@ -1,10 +1,10 @@
-
 export interface Product {
   id: string;
   name: string;
   description: string;
   price: number;
   imageUrl: string;
+  videoUrl?: string; // Optional video URL for hover effect
   category: 'synthetic' | 'natural' | 'blended' | 'accessories';
   collection: 'straight' | 'wavy' | 'curly' | 'accessories';
   bestSeller: boolean;
@@ -19,7 +19,8 @@ export const products: Product[] = [
     name: 'Natural Silky Straight Hair',
     description: 'Premium quality natural straight hair extensions, perfect for a sleek, elegant look.',
     price: 199.99,
-    imageUrl: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+    videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4', // Sample video
     category: 'natural',
     collection: 'straight',
     bestSeller: true,
@@ -32,7 +33,8 @@ export const products: Product[] = [
     name: 'Brazilian Deep Wave',
     description: 'Luxurious Brazilian deep wave hair extensions with natural bounce and feminine texture.',
     price: 249.99,
-    imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1513201099705-a9746e1e201f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+    videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4', // Sample video
     category: 'natural',
     collection: 'wavy',
     bestSeller: true,
@@ -46,6 +48,7 @@ export const products: Product[] = [
     description: 'High-quality synthetic wavy hair extensions designed with a natural look and feel.',
     price: 89.99,
     imageUrl: 'https://images.unsplash.com/photo-1626818590242-5a5f27ee3971?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+    videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4', // Sample video
     category: 'synthetic',
     collection: 'wavy',
     bestSeller: false,
@@ -59,6 +62,7 @@ export const products: Product[] = [
     description: 'Beautiful natural curly afro hair extensions, adding volume and elegance to your look.',
     price: 179.99,
     imageUrl: 'https://images.unsplash.com/photo-1541421779826-20c2b5c2f574?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+    videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4', // Sample video
     category: 'natural',
     collection: 'curly',
     bestSeller: false,

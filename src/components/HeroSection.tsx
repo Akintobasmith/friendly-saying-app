@@ -1,9 +1,31 @@
 
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { 
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious
+} from '@/components/ui/carousel';
 
 const HeroSection: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);
+
+  const heroImages = [
+    {
+      image: "https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      alt: "Elegant Hair Collection"
+    },
+    {
+      image: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+      alt: "Premium Hair Extensions"
+    },
+    {
+      image: "https://images.unsplash.com/photo-1513201099705-a9746e1e201f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+      alt: "Luxury Hair Collection"
+    }
+  ];
 
   return (
     <div className="relative min-h-screen flex items-center bg-gradient-to-r from-nude to-nude-light pt-16">
@@ -27,21 +49,31 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Right Image - Always animated regardless of hover */}
+        {/* Right Image - With Carousel */}
         <div 
           className="w-full md:w-1/2 mt-12 md:mt-0 scroll-animate"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <div className={`relative mx-auto max-w-md transition-all duration-500 ${isHovered ? 'scale-105' : 'scale-100'}`}>
-            <div className="absolute inset-0 bg-gold opacity-10 rounded-full blur-3xl"></div>
-            <img 
-              src="https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-              alt="Elegant Hair Collection" 
-              className="relative z-10 rounded-2xl shadow-xl animate-bounce-hair object-cover h-[500px] w-full"
-            />
-            <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-3/4 h-6 bg-black opacity-10 blur-md rounded-full"></div>
-          </div>
+          <Carousel className="w-full max-w-md mx-auto">
+            <CarouselContent>
+              {heroImages.map((item, index) => (
+                <CarouselItem key={index}>
+                  <div className={`relative transition-all duration-500 ${isHovered ? 'scale-105' : 'scale-100'}`}>
+                    <div className="absolute inset-0 bg-gold opacity-10 rounded-full blur-3xl"></div>
+                    <img 
+                      src={item.image} 
+                      alt={item.alt} 
+                      className="relative z-10 rounded-2xl shadow-xl object-cover h-[500px] w-full"
+                    />
+                    <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-3/4 h-6 bg-black opacity-10 blur-md rounded-full"></div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-0 bg-white/40 hover:bg-white/80" />
+            <CarouselNext className="right-0 bg-white/40 hover:bg-white/80" />
+          </Carousel>
         </div>
       </div>
 
