@@ -14,11 +14,11 @@ const Footer: React.FC = () => {
           {/* Logo and About */}
           <div className="space-y-4">
             <Link to="/" className="text-2xl font-playfair font-bold">
-              <span className="text-nude-light">Luxe</span>
-              <span className="text-gold">Hair</span>
+              <span className="text-nude-light">Rich</span>
+              <span className="text-gold">Hair Club</span>
             </Link>
             <p className="text-nude-light opacity-80 text-sm mt-2">
-              Premium quality hair extensions for the modern, sophisticated woman.
+              Premium quality hair extensions for the sophisticated individual.
             </p>
             <div className="flex space-x-4 mt-4">
               <a href="#" className="text-nude-light hover:text-gold transition-colors">
@@ -63,7 +63,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               <li className="flex items-center text-nude-light">
                 <span className="font-medium">Email:</span>
-                <a href="mailto:info@luxehair.com" className="ml-2 hover:text-gold transition-colors">info@luxehair.com</a>
+                <a href="mailto:info@richhairclub.com" className="ml-2 hover:text-gold transition-colors">info@richhairclub.com</a>
               </li>
               <li className="flex items-center text-nude-light">
                 <span className="font-medium">Phone:</span>
@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
       <div className="border-t border-brown-light py-6">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
           <p className="text-nude-light text-sm">
-            &copy; {currentYear} LuxeHair. All rights reserved.
+            &copy; {currentYear} Rich Hair Club. All rights reserved.
           </p>
           <div className="mt-4 md:mt-0">
             <img 

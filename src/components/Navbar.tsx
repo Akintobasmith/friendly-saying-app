@@ -32,8 +32,8 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="text-2xl md:text-3xl font-playfair font-bold">
-          <span className="text-brown">Luxe</span>
-          <span className="text-gold">Hair</span>
+          <span className="text-brown">Rich</span>
+          <span className="text-gold">Hair Club</span>
         </Link>
 
         {/* Desktop Navigation */}

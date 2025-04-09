@@ -15,7 +15,7 @@ const HeroSection: React.FC = () => {
             <span className="text-gold">Natural Beauty</span>
           </h1>
           <p className="text-lg md:text-xl mb-8 max-w-lg">
-            Discover premium quality hair extensions handcrafted for the modern, sophisticated woman.
+            Discover premium quality hair extensions handcrafted for the modern, sophisticated individual.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <Button className="bg-brown hover:bg-brown-dark text-white px-8 py-6 rounded-md text-base">
@@ -37,7 +37,7 @@ const HeroSection: React.FC = () => {
             <div className="absolute inset-0 bg-gold opacity-10 rounded-full blur-3xl"></div>
             <img 
               src="https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-              alt="Elegant Hair Wigs Collection" 
+              alt="Elegant Hair Collection" 
               className="relative z-10 rounded-2xl shadow-xl animate-bounce-hair object-cover h-[500px] w-full"
             />
             <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-3/4 h-6 bg-black opacity-10 blur-md rounded-full"></div>

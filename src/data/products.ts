@@ -17,7 +17,7 @@ export const products: Product[] = [
   {
     id: '1',
     name: 'Natural Silky Straight Hair',
-    description: 'Premium quality natural straight hair extensions for women, perfect for a sleek, elegant look.',
+    description: 'Premium quality natural straight hair extensions, perfect for a sleek, elegant look.',
     price: 199.99,
     imageUrl: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
     category: 'natural',
@@ -30,7 +30,7 @@ export const products: Product[] = [
   {
     id: '2',
     name: 'Brazilian Deep Wave',
-    description: 'Luxurious Brazilian deep wave hair extensions for women with natural bounce and feminine texture.',
+    description: 'Luxurious Brazilian deep wave hair extensions with natural bounce and feminine texture.',
     price: 249.99,
     imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
     category: 'natural',
@@ -43,7 +43,7 @@ export const products: Product[] = [
   {
     id: '3',
     name: 'Synthetic Blonde Wavy Hair',
-    description: 'High-quality synthetic wavy hair extensions designed specifically for women, with a natural look and feel.',
+    description: 'High-quality synthetic wavy hair extensions designed with a natural look and feel.',
     price: 89.99,
     imageUrl: 'https://images.unsplash.com/photo-1626818590242-5a5f27ee3971?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
     category: 'synthetic',
@@ -56,7 +56,7 @@ export const products: Product[] = [
   {
     id: '4',
     name: 'Natural Curly Afro Hair',
-    description: 'Beautiful natural curly afro hair extensions for women, adding volume and elegance to your look.',
+    description: 'Beautiful natural curly afro hair extensions, adding volume and elegance to your look.',
     price: 179.99,
     imageUrl: 'https://images.unsplash.com/photo-1541421779826-20c2b5c2f574?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
     category: 'natural',
@@ -69,7 +69,7 @@ export const products: Product[] = [
   {
     id: '5',
     name: 'Blended Ombre Straight Hair',
-    description: 'Beautiful blended female hair extensions with a gorgeous ombre effect from dark to caramel, perfect for a sophisticated look.',
+    description: 'Beautiful blended hair extensions with a gorgeous ombre effect from dark to caramel, perfect for a sophisticated look.',
     price: 159.99,
     imageUrl: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
     category: 'blended',
@@ -82,7 +82,7 @@ export const products: Product[] = [
   {
     id: '6',
     name: 'Luxury Hair Care Kit',
-    description: 'Complete hair care kit designed specifically for women\'s hair extensions, maintaining beauty and longevity.',
+    description: 'Complete hair care kit designed specifically for hair extensions, maintaining beauty and longevity.',
     price: 49.99,
     imageUrl: 'https://images.unsplash.com/photo-1567721913486-6585f069b332?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
     category: 'accessories',
@@ -93,7 +93,7 @@ export const products: Product[] = [
   {
     id: '7',
     name: 'Natural Loose Wave Hair',
-    description: 'Gorgeous loose wave natural hair extensions for women, creating a relaxed, elegant and feminine style.',
+    description: 'Gorgeous loose wave natural hair extensions, creating a relaxed, elegant and feminine style.',
     price: 219.99,
     imageUrl: 'https://images.unsplash.com/photo-1509967419530-da38b4704bc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
     category: 'natural',
@@ -106,7 +106,7 @@ export const products: Product[] = [
   {
     id: '8',
     name: 'Synthetic Bob Cut Wig',
-    description: 'Stylish synthetic bob cut wig for women, providing a modern, sophisticated and glamorous look.',
+    description: 'Stylish synthetic bob cut wig, providing a modern, sophisticated and glamorous look.',
     price: 69.99,
     imageUrl: 'https://images.unsplash.com/photo-1600948836101-f9ffda59d250?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
     category: 'synthetic',
