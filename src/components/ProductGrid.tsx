@@ -21,7 +21,7 @@ const ProductGrid: React.FC = () => {
   });
 
   return (
-    <section className="py-16 bg-nude-light">
+    <section id="products" className="py-16 bg-nude-light">
       <div className="container mx-auto px-4">
         <h2 className="section-title">Our Collection</h2>
         

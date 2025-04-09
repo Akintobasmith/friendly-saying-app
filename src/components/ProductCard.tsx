@@ -1,9 +1,10 @@
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Product } from '@/data/products';
 import { Button } from '@/components/ui/button';
 import { ShoppingBag, Heart, Play } from 'lucide-react';
+import { toast } from 'sonner';
 
 interface ProductCardProps {
   product: Product;
@@ -11,13 +12,26 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [videoError, setVideoError] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+  
+  useEffect(() => {
+    // Clean up on unmount
+    return () => {
+      if (videoRef.current) {
+        videoRef.current.pause();
+      }
+    };
+  }, []);
 
   // Handle mouse enter/leave for video playback
   const handleMouseEnter = () => {
     setIsHovered(true);
-    if (videoRef.current && product.videoUrl) {
-      videoRef.current.play().catch(err => console.log("Video autoplay prevented:", err));
+    if (videoRef.current && product.videoUrl && !videoError) {
+      videoRef.current.play().catch(err => {
+        console.log("Video autoplay prevented:", err);
+        setVideoError(true);
+      });
     }
   };
 
@@ -35,9 +49,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="relative overflow-hidden h-72">
+      <Link to={`/product/${product.id}`} className="relative overflow-hidden h-72 block">
         {/* Video overlay that appears on hover */}
-        {product.videoUrl && (
+        {product.videoUrl && !videoError && (
           <video 
             ref={videoRef}
             src={product.videoUrl}
@@ -45,6 +59,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             muted
             loop
             playsInline
+            onError={() => setVideoError(true)}
           />
         )}
         
@@ -73,7 +88,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             <Play size={14} className="text-brown fill-brown" />
           </div>
         )}
-      </div>
+
+        {/* View details overlay on hover */}
+        <div className={`absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity`}>
+          <span className="bg-white/80 text-brown px-4 py-2 rounded-full text-sm font-medium">View Details</span>
+        </div>
+      </Link>
       
       <div className="p-4">
         <div className="flex items-start justify-between">
@@ -81,7 +101,10 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             <h3 className="font-playfair text-lg font-medium mb-1">{product.name}</h3>
             <p className="text-brown-dark text-sm">£{product.price.toFixed(2)}</p>
           </div>
-          <button className="text-muted-foreground hover:text-gold transition-colors">
+          <button 
+            className="text-muted-foreground hover:text-gold transition-colors"
+            onClick={() => toast.success(`${product.name} added to favorites!`)}
+          >
             <Heart size={18} />
           </button>
         </div>
@@ -98,11 +121,18 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           <Button 
             className={`flex-1 h-9 text-xs bg-brown hover:bg-brown-dark text-white ${!product.inStock ? 'opacity-50 cursor-not-allowed' : ''}`}
             disabled={!product.inStock}
+            onClick={(e) => {
+              e.preventDefault();
+              toast.success(`${product.name} added to your bag!`);
+            }}
           >
             <ShoppingBag size={14} className="mr-2" />
             Add to Bag
           </Button>
-          <Link to={`/product/${product.id}`} className="flex items-center justify-center px-3 py-1 border border-brown rounded bg-white text-brown hover:bg-brown/5 text-xs h-9">
+          <Link 
+            to={`/product/${product.id}`} 
+            className="flex items-center justify-center px-3 py-1 border border-brown rounded bg-white text-brown hover:bg-brown/5 text-xs h-9"
+          >
             View
           </Link>
         </div>
