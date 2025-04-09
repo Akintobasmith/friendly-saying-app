@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -55,7 +56,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-playfair font-medium;
+    @apply font-cormorant font-medium;
   }
 
   .hair-hover-bounce:hover .hair-image {
@@ -63,7 +64,7 @@
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl lg:text-5xl font-playfair font-medium relative inline-block after:content-[''] after:absolute after:h-1 after:w-1/2 after:bg-gold after:bottom-0 after:left-0 mb-8 pb-2;
+    @apply text-3xl md:text-4xl lg:text-5xl font-cormorant font-medium relative inline-block after:content-[''] after:absolute after:h-1 after:w-1/2 after:bg-gold after:bottom-0 after:left-0 mb-8 pb-2;
   }
 }
 

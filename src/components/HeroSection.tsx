@@ -51,7 +51,7 @@ const HeroSection: React.FC = () => {
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
         {/* Left Content */}
         <div className="w-full md:w-1/2 text-center md:text-left z-10 scroll-animate">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-semibold mb-6 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-cormorant font-semibold mb-6 leading-tight">
             Unlock Your <br />
             <span className="text-gold">Natural Beauty</span>
           </h1>
@@ -78,8 +78,11 @@ const HeroSection: React.FC = () => {
         >
           <Carousel 
             className="w-full max-w-md mx-auto"
-            value={{ selectedIndex: currentSlide }}
-            onValueChange={(value) => setCurrentSlide(value.selectedIndex)}
+            opts={{ 
+              loop: true, 
+              selected: currentSlide 
+            }}
+            onSelect={(api) => setCurrentSlide(api?.selectedScrollSnap() || 0)}
           >
             <CarouselContent>
               {heroImages.map((item, index) => (
@@ -93,7 +96,7 @@ const HeroSection: React.FC = () => {
                     />
                     <div className="absolute inset-0 flex flex-col justify-end p-6 z-20">
                       <div className="bg-black/20 backdrop-blur-sm p-4 rounded-lg text-white inline-block">
-                        <h2 className="text-xl md:text-2xl font-playfair font-medium">
+                        <h2 className="text-xl md:text-2xl font-cormorant font-medium">
                           {item.title} <span className="text-gold">{item.subtitle}</span>
                         </h2>
                       </div>
@@ -116,7 +119,13 @@ const HeroSection: React.FC = () => {
                       ? 'bg-gold w-6' 
                       : 'bg-gold/30 hover:bg-gold/50'
                   }`}
-                  onClick={() => setCurrentSlide(index)}
+                  onClick={() => {
+                    setCurrentSlide(index);
+                    if (typeof window !== 'undefined') {
+                      const api = (document.querySelector('.embla__container') as any)?.__embla;
+                      if (api) api.scrollTo(index);
+                    }
+                  }}
                   aria-label={`Go to slide ${index + 1}`}
                 />
               ))}

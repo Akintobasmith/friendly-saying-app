@@ -82,7 +82,8 @@ export default {
 			},
 			fontFamily: {
 				playfair: ['"Playfair Display"', 'serif'],
-				montserrat: ['Montserrat', 'sans-serif']
+				montserrat: ['Montserrat', 'sans-serif'],
+        cormorant: ['"Cormorant Garamond"', 'serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
