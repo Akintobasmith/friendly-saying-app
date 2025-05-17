@@ -91,8 +91,8 @@ const HeroSection: React.FC = () => {
                   <div className={`relative transition-all duration-500 ${isHovered ? 'scale-105' : 'scale-100'}`}>
                     <div className="absolute inset-0 bg-gold opacity-10 rounded-full blur-3xl"></div>
                     <div className="relative">
-                      {/* Gradient fade overlay from middle to top */}
-                      <div className="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-nude-light to-transparent z-10 rounded-t-2xl"></div>
+                      {/* Enhanced gradient fade overlay from middle to top */}
+                      <div className="absolute inset-x-0 top-0 h-2/3 bg-gradient-to-b from-nude-light via-nude-light/70 to-transparent z-10 rounded-t-2xl"></div>
                       
                       <img 
                         src={item.image} 
