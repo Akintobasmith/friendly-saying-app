@@ -79,21 +79,27 @@ const HeroSection: React.FC = () => {
           <Carousel 
             className="w-full max-w-md mx-auto"
             opts={{ 
-              loop: true, 
-              selected: currentSlide 
+              loop: true
             }}
-            onSelect={(api) => setCurrentSlide(api?.selectedScrollSnap() || 0)}
+            onSelect={(api) => {
+              if (api) setCurrentSlide(api.selectedScrollSnap());
+            }}
           >
             <CarouselContent>
               {heroImages.map((item, index) => (
                 <CarouselItem key={index}>
                   <div className={`relative transition-all duration-500 ${isHovered ? 'scale-105' : 'scale-100'}`}>
                     <div className="absolute inset-0 bg-gold opacity-10 rounded-full blur-3xl"></div>
-                    <img 
-                      src={item.image} 
-                      alt={item.alt} 
-                      className="relative z-10 rounded-2xl shadow-xl object-cover h-[500px] w-full"
-                    />
+                    <div className="relative">
+                      {/* Gradient fade overlay from middle to top */}
+                      <div className="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-nude-light to-transparent z-10 rounded-t-2xl"></div>
+                      
+                      <img 
+                        src={item.image} 
+                        alt={item.alt} 
+                        className="relative rounded-2xl shadow-xl object-cover h-[500px] w-full"
+                      />
+                    </div>
                     <div className="absolute inset-0 flex flex-col justify-end p-6 z-20">
                       <div className="bg-black/20 backdrop-blur-sm p-4 rounded-lg text-white inline-block">
                         <h2 className="text-xl md:text-2xl font-cormorant font-medium">
